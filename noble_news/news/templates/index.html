@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Home</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css"/>
+</head>
+<body id="bg">
+
+    <font face="GothamBold">  <h3 align='middle' style= "color:black;">Welcome to Fake News Detector</h3></font>
+    <hr>
+    <div class="middle"></font>
+    <br><br><br><br><br><br><br><br>
+    <form align='middle' method="post" action="/">
+        {% csrf_token %}
+    <input type="text" name="Article" placeholder="Type any Article">
+    <input type="submit" name="ArticleS" value="Article">
+    <input type="text" name="KeyWord" placeholder="KeyWord">
+    <input type="submit" name="KeyWordS" value="Keyword">
+    <input type="text" name="Website" placeholder="Specify http/https">
+    <input type="submit" name="WebsiteS" value="Website">
+    </form>
+    <br><br><br>
+    <font face="GothamBold"> <p align='middle'>Check the reliability of a news article, enquire the correctness of a fact or verify the authenticity of a URL!</p></font>
+    </div>
+    </body>
+    </html>
