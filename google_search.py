@@ -161,7 +161,6 @@ def start_predict(query):
 	for i in query_list:
 		if i in fake_words:
 			sumx += 7
-			printf("detect")
 
 	google_search_it(query)
 	#print(sumx)
