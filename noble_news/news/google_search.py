@@ -110,11 +110,6 @@ def google_search_it(query):
 	soup = BeautifulSoup(html.text, 'html.parser')
 	results = soup.find('div', id='result-stats')
 
-	if(results.text == ""):
-		print("wtf?")
-	else:
-		print(results.text)
-
 	stories = ''
 
 	for links_a in soup.find_all('a'):
@@ -146,11 +141,11 @@ def start_predict(query):
 	true_points = 0
 	false_points = 0
 
-	with open("true_dataset.txt") as true_data:
+	with open("news\\true_dataset.txt") as true_data:
 	    legit_sites = true_data.readlines()
 	legit_sites = [x.strip() for x in legit_sites]
 
-	with open("fake_dataset.txt") as fake_data:
+	with open("news\\fake_dataset.txt") as fake_data:
 	    illegit_sites = fake_data.readlines()
 	illegit_sites = [x.strip() for x in illegit_sites]
 
@@ -179,4 +174,4 @@ false_points = 0
 legit_sites = []
 illegit_sites = []
 
-start_predict("Biden lost the election")
+# start_predict("Biden lost the election")

@@ -18,11 +18,11 @@ def checker(complete_link):
 	global legit_sites
 	global illegit_sites
 
-	with open("true_dataset.txt") as true_data:
+	with open("news\\true_dataset.txt") as true_data:
 		legit_sites = true_data.readlines()
 	legit_sites = [x.strip() for x in legit_sites]
 
-	with open("fake_dataset.txt") as fake_data:
+	with open("news\\fake_dataset.txt") as fake_data:
 		illegit_sites = fake_data.readlines()
 	illegit_sites = [x.strip() for x in illegit_sites]
 
@@ -66,7 +66,7 @@ def checker(complete_link):
 legit_sites = []
 illegit_sites = []
 
-pp = checker("http://www.ndtv.com")
+# pp = checker("http://www.ndtv.com")
 
-#print(legit_sites)
-print(pp)
+# #print(legit_sites)
+# print(pp)

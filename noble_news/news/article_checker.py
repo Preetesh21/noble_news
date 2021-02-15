@@ -7,7 +7,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn import metrics
 
 def predict(filename):
-    df = pd.read_csv('C:\\Users\\verma\\Desktop\\noble_news\\train.csv')
+    df = pd.read_csv('C:\\Users\\verma\\Desktop\\noble_news\\noble_news\\news\\train.csv')
 
     y = df.Label
     X = df.Body
@@ -26,7 +26,7 @@ def predict(filename):
     clf.fit(tfidf_train, y_train)                       # Fit Naive Bayes classifier according to X, y
     pred = clf.predict(tfidf_test)                     # Perform classification on an array of test vectors X.
     score = metrics.accuracy_score(y_test, pred)
-    print("accuracy:   %0.3f" % score)
+    # print("accuracy:   %0.3f" % score)
     a=pd.read_csv(filename)
     X_test=a['text']
     tfidf_test = tfidf_vect.transform(X_test.apply(lambda x: np.str_(x)))
@@ -36,4 +36,4 @@ def predict(filename):
     print(probs[0][0]*100)
     return(probs[0][0]*100)
     
-predict('C:\\Users\\verma\\Desktop\\noble_news\\data.csv')
+# predict('C:\\Users\\verma\\Desktop\\noble_news\\noble_news\\data.csv')
