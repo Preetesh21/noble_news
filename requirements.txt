@@ -4,7 +4,7 @@ bs4==0.0.1
 certifi==2020.12.5
 chardet==4.0.0
 click==7.1.2
-Django==3.1.6
+Django==3.1.8
 django-environ==0.4.5
 idna==2.10
 joblib==1.0.0
